@@ -1,0 +1,24 @@
+{
+  "name": "pomelo-sync-hjj",
+  "version": "0.0.1",
+  "dependencies": {},
+  "description": "data sync module is simple sync memory data into store engine like mysql,redis,file.",
+  "_from": "pomelo-sync@0.0.4",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://hjj6362426@github.com/hjj6362426/pomelo-sync-hjj.git"
+  },
+  "author": "hjj6362426",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hjj6362426/pomelo-sync-hjj/issues"
+  },
+  "homepage": "https://github.com/hjj6362426/pomelo-sync-hjj#readme"
+}
