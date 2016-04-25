@@ -67,19 +67,6 @@ setInterval(function(){
 setInterval(function(){
 	var User = function User(id, name){
 		this.name = name;
-		this.x = 2;
-		this.y = 2;
-		this.sceneId = 1;
-		this.uid = id;
-	};
-	var idx = parseInt(Math.random()*8000);
-	var user1 = new User(idx, 'hello'+idx);
-	sync.exec('player.updateUser',idx,user1);
-},1);
-
-setInterval(function(){
-	var User = function User(id, name){
-		this.name = name;
 		this.x = 3;
 		this.y = 3;
 		this.sceneId = 1;
