@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/hjj6362426/pomelo-sync-hjj/issues"
   },
-  "homepage": "https://github.com/hjj6362426/pomelo-sync-hjj#readme"
+  "homepage": "https://github.com/hjj6362426/pomelo-sync-hjj#readme",
+  "dependencies": {
+    "log4js":"^0.6.29",
+    "moment": "^2.10.6",
+    "mysql": "^2.7.0",
+    "async": "^1.3.0"
+  }
 }
