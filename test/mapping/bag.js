@@ -1,18 +1,29 @@
-module.exports = {
+module.exports = item = {};
 
-   selectUser:function(client,val,cb){
-		console.error(' selectUser  ' + JSON.stringify(val));
-		var sql = 'select * from  Hero where id = ?';
-		var args = [val];
-		client.query(sql, args, function(err, res){
-				if(err !== null){
-				console.error('selectUser mysql failed!　' + sql + ' ' + JSON.stringify(val));
-				cb(null,'-1');
-				} else {
-				console.info('selectUser mysql success! flash dbok ' + sql + ' ' + JSON.stringify(val));
-				cb(null,res[0]['name']);
-				}
-				});
-	}
+item.createItem=function(client,val,cb){
+	var sql = 'INSERT INTO Item (cfg_id, role_id, num,type) VALUES(?,?,?,?);';
+	var args = [val.cfg_id, val.role_id, val.num, val.type];
+	client.query(sql, args, function(err, res){
+		if(err !== null){
+			console.error('write mysql failed!　' + sql + ' ' + JSON.stringify(val));
+		} else {
+			//console.info('write mysql success! flash dbok ' + sql + ' ' + JSON.stringify(val));
+			cb();
+		}
+	});
+};
 
-}
+item.updateItem=function(client,val,cb){
+	//console.error(' updatewrite ' + JSON.stringify(val)+ '  ' + val.x+ '  ' +val.y + '  ' +val.uid);
+	var sql = 'update Item set num = ? ,type = ? where id = ?';
+	var args = [val.num, val.type, val.id];
+	client.query(sql, args, function(err, res){
+		if(err !== null){
+			console.error('write mysql failed!　' + sql + ' ' + JSON.stringify(val));
+		} else {
+			//console.info('write mysql success! flash dbok ' + sql + ' ' + JSON.stringify(val));
+			cb();
+		}
+	});
+};
+
